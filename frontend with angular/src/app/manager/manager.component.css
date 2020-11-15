@@ -1,0 +1,16 @@
+#upload{
+    padding-top: 50px;
+}
+input{
+    background-color: rgba(178, 223, 206, 0.87);
+      color:black;
+    }
+    input:focus {
+      border: 3px solid #555;
+    }
+    .form{
+        border-radius: 15px;
+        background-color: #f2f2f2;
+        padding: 30px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }

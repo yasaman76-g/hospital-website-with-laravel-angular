@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="content">
+        <form #f="ngForm" (ngSubmit)="insert(f)" class="col-md-6 col-sm-6 col-sm-offset-3 form">
+
+            <div class="form-group">
+                <label for="takhasos">تخصص</label>
+                <select class="form-control" id="takhasos" ngModel required name="takhasos">
+                    <option value="داخلی">داخلی</option>
+                    <option value="مغز و اعصاب">مغز و اعصاب</option>
+                    <option value="پوست و مو">پوست و مو</option>
+                    <option value="قلب">قلب</option>
+                    <option value="ارتوپد">ارتوپد</option>
+                    <option value="اطفال">اطفال</option>
+                    <option value="زنان">زنان</option>
+                    <option value="چشم">چشم</option>
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="day">روزهای حضور</label>
+                <select class="form-control" id="day" ngModel required name="day">
+                    <option value="شنبه">شنبه</option>
+                    <option value="یکشنبه">یکشنبه </option>
+                    <option value="دوشنبه">دوشنبه</option>
+                    <option value="سه شنبه">سه شنبه</option>
+                    <option value="چهارشنبه">چهارشنبه</option>
+                    <option value="پنج شنبه">پنج شنبه</option>
+                    <option value="جمعه">جمعه</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="shift">شیفت کاری</label>
+                <select class="form-control" id="shift" ngModel required name="shift">
+                    <option value="صبح">صبح</option>
+                    <option value="ظهر">ظهر</option>
+                    <option value="شب">شب</option>
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="time" class="control-label">ساعات حضور</label>
+                <input type="time" class="form-control" id="time" ngModel name="time" required>
+
+            </div>
+            <div class="form-group">
+                <label for="price" class="control-label">هزینه ویزیت </label>
+                <input type="text" class="form-control" id="price" ngModel name="price" required>
+
+            </div>
+            <button class="btn btn-primary" type="submit" [disabled]="!f.valid">ثبت </button>
+        </form>
+    </div>
+</div>

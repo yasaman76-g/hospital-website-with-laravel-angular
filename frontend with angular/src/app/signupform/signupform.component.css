@@ -1,0 +1,35 @@
+.btn{
+   font-size: medium;
+   font: bolder;
+    color:black;
+}
+
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+
+input{
+  background-color: rgba(178, 223, 206, 0.87);
+    color:black;
+    border-bottom-style: outset;
+  }
+  input:focus {
+    border: 3px solid #555;
+  }
+  .form{
+    border-radius: 15px;
+    background-color: #f2f2f2;
+    padding: 30px;
+    margin-top: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .content{
+    background-image: url('../../assets/img/b4.jpg');
+    background-repeat: no-repeat;
+    position: relative;
+    display: block;
+    background-size: cover;
+    filter: grayscale(20%);
+    height:1000px;
+    border-radius: 15px;
+}

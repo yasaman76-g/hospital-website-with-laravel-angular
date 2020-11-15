@@ -1,0 +1,9 @@
+#heading{
+    color: black;
+    height: 50px;
+    width: auto;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 10px;
+    background-color:rgba(40, 125, 221, 0.801);
+}

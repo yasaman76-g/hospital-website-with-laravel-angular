@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="col-md-6 col-sm-6 col-sm-offset-3 form">
+
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="form-group" id="upload">
+                <label for="image">بارگذاری تصویر:</label>
+                <input type="file" name="image" multiple (change)="fileProgress1($event)" required>
+            </div>
+            <div class="form-group">
+                <label for="titr">عنوان خبر:</label>
+                <input type="text" name="titr" formControlName="titr" required>
+            </div>
+            <div class="form-group">
+                <label for="header">پیش نمایش خبر:</label>
+                <textarea id="header" name="header" formControlName="header" class="form-control" rows="4" cols="50"
+                    required></textarea>
+
+            </div>
+            <div class="form-group" id="upload">
+                <label for="news">بارگذاری خبر:</label>
+                <input type="file" name="news" (change)="fileProgress2($event)" required>
+            </div>
+            <button type="submit" class="btn btn-primary" name="save" [disabled]="!form.valid">ارسال فایل</button>
+        </form>
+    </div>
+
+</div>

@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="content">
+        <table class="table table-responsive table-striped table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">نام بیمار</th>
+                    <th scope="col">نام پزشک</th>
+                    <th scope="col">روز</th>
+                    <th scope="col">تاریخ</th>
+                    <th scope="col">ساعت</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of turnslist;" style="cursor: pointer;">
+                    <td>{{item.first_name}} {{item.last_name}}</td>
+                    <td>{{item.doctor_fname}} {{item.doctor_lname}}</td>
+                    <td>{{item.day}}</td>
+                    <td>{{item.date}}</td>
+                    <td>{{item.changetime}}</td>
+                    <td><button class="btn btn-danger" (click)="onSelect(item)">حذف</button></td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+</div>

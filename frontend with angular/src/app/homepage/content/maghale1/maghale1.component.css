@@ -1,0 +1,18 @@
+#news{
+  height: 300px;
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius:25px;
+}
+.post{
+    font-size: 16px!important;
+      margin: 40px 0 20px!important;
+      line-height: 1.8;
+      white-space: pre-wrap;
+      overflow-wrap: break-word;
+      display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }

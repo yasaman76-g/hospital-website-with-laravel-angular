@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="content">
+        <div>
+            <h3>نوبت دهی اینترنتی بیمارستان</h3>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <h4>بیمار محترم ,در صورتیکه در تاریخ درخواستی نوبت دیگری در درمانگاه بیمارستان رزرو کرده باشید
+                        بیمارستان از پذیرش شما معذور می باشد</h4>
+                </li>
+                <li>
+                    <h4>نوبت دهی اینترنتی دندانپزشکی صرفاً جهت بیماران بالای 12سال می باشد,جهت اطفال زیر 12 سال از روش
+                        نوبت دهی تلفنی 84090 اقدام نمائید</h4>
+                </li>
+                <li>
+                    <h4>ممکن است در زمان مراجعه شما ،پزشک انتخابی شما حضور نداشته باشد و پزشک جدید جایگزین، شما را
+                        معاینه نماید</h4>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <div *ngIf="menuMode" class="col-md-6 col-md-offset-3">
+            <a class="btn btn-primary btn-block" [routerLink]="['/login']" role="button">ورود به سایت</a>
+            <a class="btn btn-primary btn-block" [routerLink]="['/signupform']" role="button">ثبت نام</a>
+        </div>
+        <div *ngIf="!menuMode" class="col-md-6 col-md-offset-3">
+            <a class="btn btn-primary btn-block" [routerLink]="['/turns']" role="button">اخذ نوبت</a>
+            <a class="btn btn-primary btn-block" [routerLink]="['']" role="button">بازگشت به صفحه اصلی</a>
+        </div>
+
+    </div>
+</div>

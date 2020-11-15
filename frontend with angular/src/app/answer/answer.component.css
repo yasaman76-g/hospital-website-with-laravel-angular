@@ -1,0 +1,12 @@
+.content{
+    background-image: url('../../assets/img/b1.jpg');
+    background-repeat: no-repeat;
+    position: relative;
+    display: block;
+    background-size: cover;
+    filter: grayscale(50%);
+    height: 560px;
+}
+#search{
+    margin-top:200px;
+}

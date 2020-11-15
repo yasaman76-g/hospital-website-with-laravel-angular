@@ -1,0 +1,13 @@
+a{
+    color: orange;
+}
+img{
+    width:80%;
+    height: 200px;
+    border-radius:25px;
+    transition: width 2s, height 2s;
+}
+img:hover{
+    width: 90%;
+  height: 250px;
+}

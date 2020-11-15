@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="content">
+        <div class="row">
+            <div *ngFor="let item of news;">
+                <div class="col-sm-12 col-md-6 form">
+                    <div>
+                        <form #f="ngForm" (ngSubmit)="update(f,item.news.id)">
+
+                            <div class="form-group">
+                                <label for="titr">عنوان خبر:</label>
+                                <br>
+                                <input type="text" name="titr" [(ngModel)]="item.news.titr" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="header">پیش نمایش خبر:</label>
+                                <br>
+                                <textarea id="header" name="header" rows="4" cols="50" [(ngModel)]="item.news.header"
+                                    required></textarea>
+
+                            </div>
+                            <button type="submit" class="btn btn-success" name="save"
+                                [disabled]="!f.valid">ویرایش</button>
+                            <button type="button" class="btn btn-danger" name="save" [disabled]="!f.valid"
+                                (click)="delete(item.news.id)">حذف</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

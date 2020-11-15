@@ -1,0 +1,88 @@
+<div class="container">
+    <div class="col-md-6 col-md-offset-3 form-group">
+        <form #f="ngForm" (ngSubmit)="insert(f)">
+            <div class="row">
+                <label for="takhasos">درمانگاه موردنظر خود را انتخاب کنید</label>
+                <select class="form-control" id="takhasos" ngModel required name="takhasos">
+                    <option value="داخلی">داخلی</option>
+                    <option value="مغز و اعصاب">مغز و اعصاب</option>
+                    <option value="پوست و مو">پوست و مو</option>
+                    <option value="قلب">قلب</option>
+                    <option value="ارتوپد">ارتوپد</option>
+                    <option value="اطفال">اطفال</option>
+                    <option value="زنان">زنان</option>
+                    <option value="چشم">چشم</option>
+
+                </select>
+
+                <button class="btn" type="submit" [disabled]="!f.valid">جست وجو</button>
+
+            </div>
+        </form>
+    </div>
+
+    <div>
+        <div *ngIf="tableMode">
+            <div class="col-md-6 col-md-offset-3">
+                <label for="takhasos">شیفت موردنظر خود را انتخاب کنید</label>
+                <select class="form-control" id="shift" [(ngModel)]="filterstring" ngModel name="shift">
+                    <option></option>
+                    <option value="صبح">صبح</option>
+                    <option value="ظهر">ظهر</option>
+                    <option value="شب">شب</option>
+
+                </select>
+            </div>
+            <br>
+            <table class="table table-responsive table-striped table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">نام پزشک</th>
+                        <th scope="col">شیفت</th>
+                        <th scope="col">روزهای حضور</th>
+                        <th scope="col">تاریخ </th>
+                        <th scope="col">ساعت حضور</th>
+                        <th scope="col">هزینه ویزیت</th>
+                        <th scope="col">اخذ نوبت</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of doctors | filter:filterstring:'shift';let i=index" style="cursor: pointer;">
+                        <th scope="row">{{i+1}}</th>
+                        <td>{{item.first_name}} {{item.last_name}}</td>
+                        <td>{{item.shift}}</td>
+                        <td>{{item.day}}</td>
+                        <td>{{item.date}}</td>
+                        <td>{{item.time}}</td>
+                        <td>{{item.price}}</td>
+                        <td><button class="btn btn-success" (click)="onSelect(item)">اخذ</button></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-success" *ngFor="let item of selectdoctors">
+            <div class="panel-heading">
+                <h4>نوبت اخذ شده {{item.user_fname}} {{item.user_lname}}</h4>
+            </div>
+            <div class="panel-body">
+                <h4><br>
+                    نام پزشک:{{item.first_name}} {{item.last_name}}<br>
+                    شیفت:{{item.shift}}<br>
+                    روز: {{item.day}}<br>
+                    تاریخ: {{item.date}}<br>
+                    ساعت:{{item.changetime}}<br>
+                    هزینه ویزیت:{{item.price}}</h4>
+
+                <button class="btn btn-primary" (click)="insertturns(item)">پرداخت
+                    هزینه</button>
+
+            </div>
+        </div>
+    </div>
+
+</div>

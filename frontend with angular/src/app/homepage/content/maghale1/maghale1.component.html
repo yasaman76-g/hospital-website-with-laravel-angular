@@ -1,0 +1,17 @@
+<div class="container">
+    <div>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img id="news" src="http://127.0.0.1:80/hospital-laravel/public/file/{{fimage}}" alt="">
+                </div>
+                <div class="item" *ngFor="let img of album;let i=index">
+                    <img id="news" src="http://127.0.0.1:80/hospital-laravel/public/file/{{img}}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="post">
+            {{news}}
+        </div>
+    </div>
+</div>
